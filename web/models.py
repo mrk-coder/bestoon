@@ -10,7 +10,7 @@ class Expense(models.Model):
         return "{}--{}".format(self.date, self.amount)
 
 
-class Incomme(models.Model):
+class Income(models.Model):
     text = models.CharField(max_length=200)
     date = models.DateTimeField()
     amount = models.BigIntegerField()
