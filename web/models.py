@@ -24,3 +24,13 @@ class Income(models.Model):
     user = models.ForeignKey(User, on_delete = models.PROTECT)
     def __str__(self):
         return "{}--{}".format(self.date, self.amount)
+
+
+class passwordresetcodes(models.Model):
+    code = models.CharField(max_length=32)
+    time = models.DateTimeField()
+    email = models.CharField(max_length=120)
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50) #TODO : Do not save password
+
+
